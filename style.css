@@ -1,0 +1,154 @@
+/* importing my fonts from Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Press+Start+2P&display=swap');
+/* setting box bordering to entire page */
+* {
+    box-sizing: border-box;
+}
+/* styling the body the using percent with the width was a big advantage */
+body{
+    font-family: 'Press Start 2P', cursive;
+    width: 80%;
+    height: max-content;
+    margin: 0 auto;
+    background-color: black;
+    color: orangered;
+    font-size: 50%;
+    line-height: 30px;
+}
+h1{
+    color:orangered;
+    font-family: 'Bungee', cursive;
+    font-size: xx-large;
+    position: absolute;
+    left: 400px;
+    top: 1px;
+}
+#instructions{
+    margin-top: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+#info{
+    margin-left: 125px;
+    width: 75%;
+}
+#icon{
+    color: orangered;
+}
+/* remember in the HTML this was not seen until user pick amount of disc
+display:none; is the reason for that could have used the visibility property 
+but it still leaves the div there just doesn't show content
+https://dev.to/stephencweiss/display-none-vs-visibility-hidden-2pg3  */
+#holder{
+    margin-top: 50px;
+    display: none;
+}
+#discHolder{
+    outline: 2px dashed orangered;
+    width: 250px;
+    height: 25px;
+}
+/* Here is where the disc amount get placed */
+#selection{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center; 
+    position: relative;
+    left: 450px;
+    top: 10px;
+}
+#selected{
+    margin-left: 5px;
+    background-color: black;
+    color: orangered;
+}
+#resetGame{
+    background-color: black;
+    color: orangered; 
+}
+#endGame{
+    position: relative;
+    left: 75%;
+    background-color: black;
+    color: orangered; 
+}
+footer{
+    position: relative;
+    bottom: -20px;
+    font-size: 10%;
+}
+
+/* Everything below is the styling for the actual game play */
+
+/* Use display none so the element won't be seen until disc amount is chosen */
+.moves{
+    display: none;
+    margin-left: 45%;
+    position: relative;
+    top: 35px;
+}
+/* GameArea holds the towers so direction of row and space evenly allows room to have up to 9 disc */
+#gameArea{
+    margin-top: 150px;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+/* Each tower has this class and using direction column with flex-end
+ allows the disc to show up at the bottom of each tower */
+.tower{
+    width: 15px;
+    height: 150px;
+    background-color:tan;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+/* Each disc has this class  */
+.disc{
+    height: 15px;
+    outline: 2px double darkslategrey;
+}
+/* Created nine disc id and gave each a different background color and width */
+#disc1 {
+    width: 25px;
+    background-color: pink;
+}
+#disc2 {
+    width: 50px;
+    background-color: turquoise;
+}
+#disc3 {
+    width: 75px;
+    background-color: purple
+}
+#disc4 {
+    width: 100px;
+    background-color: green;
+}
+#disc5 {
+    width: 125px;
+    background-color: red;
+}
+#disc6 {
+    width: 150px;
+    background-color: blue;
+}
+#disc7 {
+    width: 175px;
+    background-color: yellow;
+}
+#disc8 {
+    width: 200px;
+    background-color: orange;
+}
+#disc9 {
+    width: 225px;
+    background-color: brown;
+}
+

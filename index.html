@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ToH</title>
+</head>
+<body>
+<!--Header at the top of page with a image found on https://www.flaticon.com/ -->
+    <h1>Tower of Hanoi <img src="toh_icon.png" alt="ToHIcon"></h1>
+    <!-- Below is the area for the rules and a disc holding spot for disc when they are waiting to be dropped -->
+    <div id="main">
+        <div id="instructions">
+            <!-- Disc Holder  -->
+            <div id="holder">
+                Disc Holder:
+                <div id="discHolder"></div>
+            </div>
+            <!-- rules -->
+            <div id="info">
+                <p>It consists of three rods and a number of discs of different sizes, which can slide onto any rod. The puzzle starts with all the disks stacked on one rod, largest at the bottom, smallest at the top.</p>
+                <p>The objective of the puzzle is to move the entire stack to last rod, obeying the following simple rules:</p>
+                <ol>
+                    <li>Only one disk can be moved at a time.</li>
+                    <li>Each move consists of taking the upper disk from one of the stacks and placing it on top of another stack.</li>
+                    <li>No disk may be placed on top of a smaller disk.</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Below allows the user to decide how many disk they would love to play with
+        This div uses a select with a label and options for 4 to 9 
+        along with a button to get the value from the picked amount-->
+        <div id="selection">
+            <label for="discAmount" class="discAmount">Pick how many disc:</label>
+            <select class="discAmount" id="discAmount">
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            <!-- This button has an EventListener for click -->
+            <button id="selected">I'm Ready Sensi!</button>
+        </div>
+        <!-- The moves div lets the user know how many moves they have taken so far
+        Only the span with id changes the class is used for css -->
+        <div class="moves">Number of Moves taken: <span id="moves">0</span></div>
+        <!-- Below is where the actual tower and disc are 
+            they only show up once user picks a number of disc 
+            check out the css -->
+        <div id="gameArea">
+            <div class="tower" id="tower1">
+            </div>
+            <div class="tower" id="tower2"></div>
+            <div class="tower" id="tower3"></div>
+        </div>
+        <hr>
+        <!-- These two buttons have EventListeners to rest the current game 
+            with same amount of disc chosen at first or start the entire game over -->
+        <button id="resetGame">Reset Match Sensi!</button>
+        <button id="endGame">Start Over Seni!</button>
+    </div>
+    <!-- This footer is here for giving credit to the creator of the image used in the header -->
+    <footer>
+        Icons made by 
+        <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> 
+        from 
+        <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+    </footer>
+    <!-- The only script tag used -->
+    <script src="script.js"></script>
+</body>
+</html>
